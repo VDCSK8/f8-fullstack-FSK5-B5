@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 20px;
+}
+label {
+    display: inline-block;
+    color: aliceblue;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.section {
+    padding: 20px;
+}
+
+h4 {
+    background: orange;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+label {
+    padding-left: 30px;
+}
+h4::before {
+    position: absolute;
+    content: "+";
+    font-size: 20px;
+    margin-left: 10px;
+    color: aliceblue;
+}
+input {
+    display: none;
+}
+input:checked + h4 + .form {
+    display: block;
+}
+input:checked + h4::before {
+    content: "-";
+}
+.form {
+    display: none;
+}
